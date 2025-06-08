@@ -21,29 +21,8 @@ Dimana:
 ### Persamaan Dinamika
 Dinamika drone diatur oleh persamaan berikut:
 
-1. **Dinamika Translasi**:
-   $$m\dot{\mathbf{v}} = \mathbf{F}_{\text{thrust}} + \mathbf{F}_{\text{gravity}} + \mathbf{F}_{\text{drag}}$$
+![image](https://github.com/user-attachments/assets/2e6de9cc-69ad-4987-8a4f-348d05b83b82)
 
-2. **Transformasi Gaya Thrust**:
-   $$\mathbf{F}_{\text{thrust, global}} = \mathbf{R} \begin{bmatrix} 0 \\ 0 \\ -T \end{bmatrix}$$
-   Dimana $\mathbf{R}$ adalah matriks rotasi dari body frame ke global frame.
-
-3. **Gaya Gravitasi**:
-   $$\mathbf{F}_{\text{gravity}} = \begin{bmatrix} 0 \\ 0 \\ mg \end{bmatrix}$$
-
-4. **Gaya Drag**:
-   $$\mathbf{F}_{\text{drag}} = -\frac{1}{2} \rho A C_d \|\mathbf{v}\| \mathbf{v}$$
-
-5. **Kinematika Orientasi**:
-   $$\begin{bmatrix} \dot{\phi} \\ \dot{\theta} \\ \dot{\psi} \end{bmatrix} = 
-   \begin{bmatrix} 
-   1 & \sin\phi\tan\theta & \cos\phi\tan\theta \\
-   0 & \cos\phi & -\sin\phi \\
-   0 & \sin\phi/\cos\theta & \cos\phi/\cos\theta 
-   \end{bmatrix} \begin{bmatrix} p \\ q \\ r \end{bmatrix}$$
-
-6. **Dinamika Rotasi**:
-   $$\mathbf{I}\dot{\boldsymbol{\omega}} = \boldsymbol{\tau} - \boldsymbol{\omega} \times (\mathbf{I}\boldsymbol{\omega})$$
 
 ### Kontrol PID
 Kontroler PID digunakan untuk menjaga ketinggian dan stabilitas:
